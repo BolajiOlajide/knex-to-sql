@@ -20,4 +20,6 @@ To convert migrations in a directory `migrations` to the raw SQL equivalent:
 kk <input_path> -o <output_path>
 ```
 
-`input_path` is required, it can be a file or a directory. Output file is optional, if not provided, it'll create a `kat_migrations` directory in the current working directory.
+`input_path` is required, it can be a file or a directory. 
+
+`output_path` is optional, if not provided, it'll create a `kat_migrations` directory in the current working directory.
