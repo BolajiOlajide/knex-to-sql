@@ -1,19 +1,48 @@
 {
   "name": "knex-to-kat",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "0.0.1",
+  "description": "converts knex migrations into raw SQL statements compatible with Kat.",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "ts-node src/kk.ts",
+    "test": "jest"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "kat",
+    "knex",
+    "postgres",
+    "migrations"
+  ],
+  "author": {
+    "email": "25608335+BolajiOlajide@users.noreply.github.com",
+    "name": "Bolaji Olajide"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:BolajiOlajide/knex-to-kat.git"
+  },
   "dependencies": {
-    "commander": "^10.0.0"
+    "commander": "^10.0.0",
+    "knex": "^2.4.2",
+    "pg": "^8.10.0",
+    "sql-formatter": "^12.2.0"
   },
   "devDependencies": {
     "@types/node": "^18.15.10",
+    "jest": "^29.5.0",
+    "ts-node": "^10.9.1",
     "typescript": "^5.0.2"
-  }
+  },
+  "license": "MIT",
+  "main": "./lib/kk.js",
+  "module": "./lib/kk.esm.js",
+  "types": "./lib/kk.d.ts",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "files": [
+    "lib",
+    "package.json",
+    "README.md"
+  ]
 }
