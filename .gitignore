@@ -2,3 +2,9 @@
 node_modules
 migrations
 kat-migrations
+dist/
+package/
+*.tgz
+src/meta.json
+tmp/
+*.log
