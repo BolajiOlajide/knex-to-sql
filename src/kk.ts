@@ -2,15 +2,15 @@
 
 import { Command } from 'commander';
 
-import packageJSON from './meta.json';
+import meta from './meta.json';
 import { handler, defaultOutputPath, defaultMigrationPath } from './handler';
 
-const program = new Command(packageJSON.name);
+const program = new Command(meta.name);
 
 program
 	.name('kk')
-	.description(packageJSON.description)
-	.version(packageJSON.version)
+	.description(meta.description)
+	.version(meta.version)
 	.usage("-m <migrations_path> -o <output_path>")
 	.option('-o, --output <path>', 'directory where computed migrations should live', defaultOutputPath)
 	.option('-m, --migrations_path <path>', 'directory containing knex migrations', defaultMigrationPath)
