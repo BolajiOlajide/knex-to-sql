@@ -57,10 +57,6 @@ export const handler = async (opts: KKArgs): Promise<void> => {
 		}
 	} catch (error: unknown) {
 		console.log('an error occurred', (error as Error).message)
-	} finally {
-		if (client !== undefined) {
-			client.destroy();
-		}
 	}
 };
 
