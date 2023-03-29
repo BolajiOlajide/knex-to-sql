@@ -6,7 +6,9 @@
     "forceConsistentCasingInFileNames": true,
     "strict": true,
 	"declaration": true,
-    "outDir": "./dist",
+	"importHelpers": true,
+    "outDir": "dist",
+	"rootDir": "src",
 	"resolveJsonModule": true,
     "lib": ["es2017"]
   },

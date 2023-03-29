@@ -23,3 +23,7 @@ kk <input_path> -o <output_path>
 `input_path` is required, it can be a file or a directory. 
 
 `output_path` is optional, if not provided, it'll create a `kat_migrations` directory in the current working directory.
+
+### Development
+
+When developing you can run the command using `pnpm dev`

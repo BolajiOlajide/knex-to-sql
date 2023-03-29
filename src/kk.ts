@@ -2,7 +2,7 @@
 
 import { Command } from 'commander';
 
-import packageJSON from '../package.json';
+import packageJSON from './meta.json';
 import { handler, defaultOutputPath, defaultMigrationPath } from './handler';
 
 const program = new Command(packageJSON.name);

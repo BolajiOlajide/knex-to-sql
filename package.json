@@ -3,8 +3,11 @@
   "version": "0.0.1",
   "description": "converts knex migrations into raw SQL statements compatible with Kat.",
   "scripts": {
-    "dev": "ts-node src/kk.ts",
-    "test": "jest"
+    "dev": "./bin/dev",
+    "test": "jest",
+    "build": "rm -rf dist && cp package.json ./src/meta.json && tsc -b",
+    "postpack": "rm -f oclif.manifest.json",
+    "prepack": "npm run build && oclif manifest && oclif readme"
   },
   "keywords": [
     "kat",
@@ -21,6 +24,9 @@
     "url": "git@github.com:BolajiOlajide/knex-to-kat.git"
   },
   "dependencies": {
+    "@oclif/core": "^2.7.1",
+    "@oclif/plugin-help": "^5.2.8",
+    "@oclif/plugin-plugins": "^2.4.3",
     "commander": "^10.0.0",
     "knex": "^2.4.2",
     "pg": "^8.10.0",
@@ -29,7 +35,9 @@
   "devDependencies": {
     "@types/node": "^18.15.10",
     "jest": "^29.5.0",
+    "oclif": "^3.7.2",
     "ts-node": "^10.9.1",
+    "tslib": "^2.5.0",
     "typescript": "^5.0.2"
   },
   "license": "MIT",
@@ -43,6 +51,20 @@
   "files": [
     "lib",
     "package.json",
-    "README.md"
-  ]
+    "README.md",
+    "/bin",
+    "/dist",
+    "/npm-shrinkwrap.json",
+    "/oclif.manifest.json"
+  ],
+  "oclif": {
+    "bin": "kk",
+    "dirname": "kk",
+    "commands": "./dist/commands",
+    "default": ".",
+    "plugins": [
+      "@oclif/plugin-help",
+      "@oclif/plugin-plugins"
+    ]
+  }
 }
