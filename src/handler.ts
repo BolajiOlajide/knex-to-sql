@@ -6,7 +6,7 @@ import { format, FormatOptionsWithLanguage } from 'sql-formatter';
 import { KKArgs, Migration } from './types';
 
 // default values
-export const defaultOutputPath = path.join(process.cwd(), 'kat-migrations');
+export const defaultOutputPath = path.join(process.cwd(), 'kk-migrations');
 export const defaultMigrationPath = path.join(process.cwd(), 'migrations');
 
 export const handler = async (opts: KKArgs): Promise<void> => {
