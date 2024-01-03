@@ -8,3 +8,5 @@ package/
 src/meta.json
 tmp/
 *.log
+.npmrc
+kk-migrations
